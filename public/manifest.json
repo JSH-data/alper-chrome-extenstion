@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "alper-prototype",
+  "version": "0.0",
+  "description": "알퍼 프로토타입 제작",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "scripting",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ]
+}
