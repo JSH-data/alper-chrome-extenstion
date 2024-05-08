@@ -1,8 +1,29 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import {data} from './export-tester';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { createHtmlPlugin } from "vite-plugin-html";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  build: {
+    rollupOptions: {
+      input: {
+        background: "src/background/index.ts",
+      },
+      output: {
+        entryFileNames: "scripts/[name].js",
+      },
+    },
+  },
+  plugins: [
+    react(),
+    createHtmlPlugin({
+      minify: false,
+      pages: [
+        {
+          entry: "src/popup/index.tsx",
+          filename: "index.html",
+          template: "index.html",
+        },
+      ],
+    }),
+  ],
+});
