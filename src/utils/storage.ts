@@ -29,16 +29,16 @@ class ChromeStorage {
 
   static async getUserInfo(): Promise<UserInfo> {
     const data = await ChromeStorage.getData([
-      CONSTANT.LINKED_REPO,
+      CONSTANT.REPO_NAME,
       CONSTANT.OWNER_NAME,
       CONSTANT.ACCESS_TOKEN,
-      CONSTANT.DIRECTORY_NAME,
+      CONSTANT.STORAGE_PATH,
     ]);
 
     return {
-      repo: data[CONSTANT.LINKED_REPO],
-      directory: data[CONSTANT.DIRECTORY_NAME],
+      repo: data[CONSTANT.REPO_NAME],
       owner: data[CONSTANT.OWNER_NAME],
+      directory: data[CONSTANT.STORAGE_PATH],
       token: data[CONSTANT.ACCESS_TOKEN],
     };
   }
