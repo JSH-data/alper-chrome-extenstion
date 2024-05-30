@@ -1,17 +1,9 @@
 export function getSubmittedCode() {
-  const codes = document.querySelectorAll("pre.CodeMirror-line");
+  const codes = document.querySelector("textarea");
 
-  let totalCode = "";
-
-  for (let i = 0; i < codes.length; i += 1) {
-    if (i === codes.length - 1) {
-      totalCode += codes[i].textContent;
-
-      continue;
-    }
-
-    totalCode += codes[i].textContent + "\n";
+  if (codes === null || codes.textContent === null) {
+    throw new Error("There is no codes! Upload is Failed!");
   }
 
-  return contentEncoder(totalCode);
+  return contentEncoder(codes.textContent);
 }
