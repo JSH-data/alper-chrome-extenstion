@@ -1,25 +1,11 @@
-// Move to TestKeyFile and Make Freeze
-const languageMap: { [key: string]: string } = {
-  TypeScript: "ts",
-  JavaScript: "js",
-};
-
 export function getFileExtension() {
-  console.log("getFileExtension");
+  const language = document.querySelector("#editor button")?.textContent;
 
-  const extensionChevronButton =
-    document.getElementsByClassName("fa-chevron-down")[0];
-
-  const extensionText =
-    extensionChevronButton.parentNode?.previousSibling?.textContent;
-
-  if (!extensionText) {
-    throw new Error("Could not find file extension");
+  if (language && EXTENSIONS_NAME[language]) {
+    return EXTENSIONS_NAME[language];
   }
 
-  console.log(languageMap[extensionText]);
-
-  return "ts";
+  throw new Error("Failed to get file extensions");
 }
 
 export function getProblemName() {

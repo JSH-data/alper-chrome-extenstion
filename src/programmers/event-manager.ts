@@ -1,5 +1,8 @@
 import { findModalTitle, getProblemName } from "@/programmers/dom-finder";
-import { getSubmittedCode } from "@/programmers/code-parser";
+import {
+  getSubmittedCode,
+  getFileExtension,
+} from "@/programmers/problem-parser";
 
 export default class ProgrammersEvent {
   public static addSubmitEvent(buttonElement: Element, cb: () => void) {
@@ -23,7 +26,7 @@ export default class ProgrammersEvent {
 
         try {
           const code = getSubmittedCode();
-          const extension = "js";
+          const extension = getFileExtension();
           const problemName = getProblemName();
 
           const fileName = `${problemName}.${extension}`;
