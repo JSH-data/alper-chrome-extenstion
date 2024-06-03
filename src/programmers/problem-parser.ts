@@ -11,11 +11,15 @@ export function getFileExtension() {
 }
 
 export function getSubmittedCode() {
-  const codes = document.querySelector("textarea");
+  const codeElement = document.querySelector("#code");
 
-  if (codes === null || codes.textContent === null) {
+  if (codeElement === null) {
     throw new Error("There is no codes! Upload is Failed!");
   }
 
-  return contentEncoder(codes.textContent);
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-expect-error
+  const codeText = codeElement.value as string;
+
+  return contentEncoder(codeText);
 }
