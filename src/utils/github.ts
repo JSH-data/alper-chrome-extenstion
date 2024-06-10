@@ -3,14 +3,14 @@ class Github {
   static async uploadOrUpdate(
     fileName: string,
     code: string,
-    platform: string
+    platform: string,
   ) {
     const { repo, directory, owner, token } = await ChromeStorage.getUserInfo();
 
     const encodedFileName = encodeURIComponent(fileName);
 
     const encodedFilePath = `${directory}/${encodedFileName}`;
-    const nomalPath = `${directory}/${fileName}`;
+    const normalPath = `${directory}/${fileName}`;
 
     const contentInfo = await getContentInfo({
       repo,
@@ -25,7 +25,7 @@ class Github {
       return updateFile({
         repo,
         owner,
-        path: nomalPath,
+        path: normalPath,
         urlPath: encodedFilePath,
         token,
         message: commitMessage,
@@ -39,7 +39,7 @@ class Github {
     return uploadNewFile({
       repo,
       owner,
-      path: nomalPath,
+      path: normalPath,
       token,
       urlPath: encodedFilePath,
       message: commitMessage,
