@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.57.0"],\
           ["eslint-plugin-react-hooks", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:4.6.2"],\
           ["eslint-plugin-react-refresh", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:0.4.6"],\
+          ["prettier", "npm:3.3.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:18.3.1"],\
           ["ts-node", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:10.9.2"],\
@@ -3520,6 +3521,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["prettier", [\
+      ["npm:3.3.1", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.3.1-91c1be8598/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:3.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["proc-log", [\
       ["npm:3.0.0", {\
         "packageLocation": "../../.yarn/berry/cache/proc-log-npm-3.0.0-a8c21c2f0f-10c0.zip/node_modules/proc-log/",\
@@ -4250,6 +4260,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.57.0"],\
           ["eslint-plugin-react-hooks", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:4.6.2"],\
           ["eslint-plugin-react-refresh", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:0.4.6"],\
+          ["prettier", "npm:3.3.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:18.3.1"],\
           ["ts-node", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:10.9.2"],\
