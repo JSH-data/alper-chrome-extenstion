@@ -35,10 +35,18 @@ class ChromeStorage {
       CONSTANT.STORAGE_PATH,
     ]);
 
+    if (
+      !data[CONSTANT.REPO_NAME] ||
+      !data[CONSTANT.OWNER_NAME] ||
+      !data[CONSTANT.ACCESS_TOKEN]
+    ) {
+      throw new Error(MESSAGE_TEXT.E41);
+    }
+
     return {
       repo: data[CONSTANT.REPO_NAME],
       owner: data[CONSTANT.OWNER_NAME],
-      directory: data[CONSTANT.STORAGE_PATH],
+      directory: data[CONSTANT.STORAGE_PATH] ? data[CONSTANT.STORAGE_PATH] : "",
       token: data[CONSTANT.ACCESS_TOKEN],
     };
   }
