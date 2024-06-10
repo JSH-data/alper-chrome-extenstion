@@ -13,7 +13,7 @@ export default class ProgrammersEvent {
 
   public static intervalEvent() {
     let retryCount = 10;
-    let timerId: null | number = null;
+    let timerId: null | ReturnType<typeof setInterval> = null;
 
     timerId = setInterval(async () => {
       console.log("인터벌이 작동됩니다.");

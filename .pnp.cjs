@@ -28,6 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@types/chrome", "npm:0.0.267"],\
+          ["@types/node", "npm:20.14.2"],\
           ["@types/react", "npm:18.3.1"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:7.8.0"],\
@@ -1129,6 +1130,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@types-json-schema-npm-7.0.15-fd16381786-10c0.zip/node_modules/@types/json-schema/",\
         "packageDependencies": [\
           ["@types/json-schema", "npm:7.0.15"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/node", [\
+      ["npm:20.14.2", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-node-npm-20.14.2-fa12d1e34b-10c0.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:20.14.2"],\
+          ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4010,7 +4021,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", null],\
+          ["@types/node", "npm:20.14.2"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -4091,6 +4102,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/typescript-patch-6e159bfddb-10c0.zip/node_modules/typescript/",\
         "packageDependencies": [\
           ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["undici-types", [\
+      ["npm:5.26.5", {\
+        "packageLocation": "../../.yarn/berry/cache/undici-types-npm-5.26.5-de4f7c7bb9-10c0.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4181,7 +4201,7 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:5.2.11"],\
           ["@types/less", null],\
           ["@types/lightningcss", null],\
-          ["@types/node", null],\
+          ["@types/node", "npm:20.14.2"],\
           ["@types/sass", null],\
           ["@types/stylus", null],\
           ["@types/sugarss", null],\
@@ -4221,6 +4241,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["vite-chrome-extension", "workspace:."],\
           ["@types/chrome", "npm:0.0.267"],\
+          ["@types/node", "npm:20.14.2"],\
           ["@types/react", "npm:18.3.1"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@typescript-eslint/eslint-plugin", "virtual:7117b63b6a68d99b8bf187970c02c36bff0c686d1f9a12cd2e01383eca7661f7aee8c66033346e80c6798f03db7f4b281c4164e45e38d9592a495ff7ad7bc766#npm:7.8.0"],\

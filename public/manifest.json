@@ -12,9 +12,6 @@
     "48": "icon-48.png",
     "128": "icon-128.png"
   },
-  "background": {
-    "service_worker": "scripts/background.js"
-  },
   "permissions": [
     "scripting",
     "tabs",
@@ -40,6 +37,7 @@
       "js": [
         "scripts/programmers.js",
         "scripts/constants.js",
+        "scripts/status-message.js",
         "scripts/storage.js",
         "scripts/commit.js",
         "scripts/github.js",
@@ -54,6 +52,7 @@
       "js": [
         "scripts/leetcodes.js",
         "scripts/constants.js",
+        "scripts/status-message.js",
         "scripts/storage.js",
         "scripts/commit.js",
         "scripts/github.js",
