@@ -10,16 +10,32 @@ Alpha is a Chrome Extension that automatically uploads the algorithm code you so
 0. Install node.js [DOWNLOAD](https://nodejs.org/en) and Create [Github OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app) 
 1. Download and decompress Code ZIP
 <br />
+
 <img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/a1886b59-a08b-4faa-b8a1-b5b4b7b04735" width="300"/>
+
 <br />
-2. Install dependencies ``yarn install``
-<br />
+
+2. Install dependencies
+
+```bash
+yarn install
+```
+
 3. Create `.env` file and add your github Github OAuth Client ID & Client secrets
+
 ```
 VITE_CLIENT_SECRET="YOUR_SECRET"
 VITE_CLIENT_ID="YOUR_ID"
 ```
-4. Build Application ``yarn build``
+
+
+4. Build Application
+
+```bash
+yarn build
+```
+
+
 5. Enable [Chrome Extension](chrome://extensions/) Developer mode 
 <br />
 6. Load dist folder into Chrome Extension
