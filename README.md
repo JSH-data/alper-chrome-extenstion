@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Alpher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Alpha is a Chrome Extension that automatically uploads the algorithm code you solved to Github!
 
-Currently, two official plugins are available:
+<img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/fbdfebbb-a0f8-46d7-aa49-a31898b80de2" width="700"/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+>It will be uploaded to the Chrome Extension market soon! Until then, you will have to download and run manually. 
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Installation
+0. Install node.js [DOWNLOAD](https://nodejs.org/en) and Create [Github OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app) 
+1. Download and decompress Code ZIP
+<br />
+<img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/a1886b59-a08b-4faa-b8a1-b5b4b7b04735" width="300"/>
+<br />
+2. Install dependencies ``yarn install``
+<br />
+3. Create `.env` file and add your github Github OAuth Client ID & Client secrets
 ```
+VITE_CLIENT_SECRET="YOUR_SECRET"
+VITE_CLIENT_ID="YOUR_ID"
+```
+4. Build Application ``yarn build``
+5. Enable [Chrome Extension](chrome://extensions/) Developer mode 
+<br />
+6. Load dist folder into Chrome Extension
+<br />
+<img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/e0cfd433-335b-4a53-a9df-608142bca9a8" width="500" />
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+1. Get user authentication through Popup
+<br />
+<img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/5b709b45-91d8-456e-84b5-517ea72c200b"/>
+2. Add your Repository Name(Required) and Folder Name(Optional)
+<br />
+<img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/947184ca-46e9-47ea-b069-76e4a8d967bd"/>
+3. Enjoy Alpher!
