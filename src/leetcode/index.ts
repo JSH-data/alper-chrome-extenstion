@@ -1,25 +1,25 @@
-import { findSubmitButton } from "./dom-finder";
+import { getSubmitButton, getCodeTabBar } from "./dom-finder";
 import LeetcodeEvent from "@/leetcode/event-manager";
 
-function addIconsOnPage() {
-  console.log("addIconsOnPage");
+checkContentLoad('[data-e2e-locator="console-submit-button"]', "#__next").then(
+  (res) => {
+    const submitButton = getSubmitButton();
+    const codeTabBar = getCodeTabBar();
 
-  const codeSectionHeader = document.getElementById("code_tabbar_outer");
+    if (res && codeTabBar) {
+      StatusMessage.appendStatusMessage(codeTabBar);
 
-  if (codeSectionHeader) {
-    const signature = document.createElement("div");
+      LeetcodeEvent.addSubmitEvent(submitButton, () =>
+        LeetcodeEvent.intervalEvent(StatusMessage.setMessage),
+      );
 
-    signature.textContent = "Alpher Is Running!";
-
-    codeSectionHeader?.parentElement?.appendChild(signature);
-  }
-}
-
-// InterSectionObserver로 변경 예정
-setTimeout(() => {
-  addIconsOnPage();
-
-  const button = findSubmitButton();
-
-  LeetcodeEvent.addSubmitEvent(button, LeetcodeEvent.intervalEvent);
-}, 3000);
+      ChromeStorage.getUserInfo()
+        .then(() => {
+          console.log("인증에 성공했습니다!");
+        })
+        .catch((error: Error) => {
+          StatusMessage.setMessage(error.message);
+        });
+    }
+  },
+);

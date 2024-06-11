@@ -1,4 +1,4 @@
-import { findModalTitle, getProblemName } from "@/programmers/dom-finder";
+import { getModalTitle, getProblemName } from "@/programmers/dom-finder";
 import {
   getSubmittedCode,
   getFileExtension,
@@ -11,19 +11,14 @@ export default class ProgrammersEvent {
     });
   }
 
-  public static intervalEvent() {
+  public static intervalEvent(onError: (errorMessage: string) => void) {
     let retryCount = 10;
     let timerId: null | ReturnType<typeof setInterval> = null;
 
     timerId = setInterval(async () => {
-      console.log("인터벌이 작동됩니다.");
-      const modalTile = findModalTitle();
-
-      console.log(modalTile);
+      const modalTile = getModalTitle();
 
       if (modalTile?.textContent === "정답입니다!" && timerId) {
-        console.log("문제 풀이가 정상적으로 확인되었습니다.");
-
         try {
           const code = getSubmittedCode();
           const extension = getFileExtension();
@@ -31,13 +26,15 @@ export default class ProgrammersEvent {
 
           const fileName = `${problemName}.${extension}`;
 
-          console.log(problemName);
-
           await Github.uploadOrUpdate(fileName, code, "programmers");
 
           clearInterval(timerId);
         } catch (error) {
-          console.log(error);
+          if (error instanceof Error) {
+            onError(error.message);
+          }
+
+          console.error(error);
           clearInterval(timerId);
         }
       }

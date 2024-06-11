@@ -8,19 +8,14 @@ export default class LeetcodeEvent {
     });
   }
 
-  public static intervalEvent() {
+  public static intervalEvent(onError: (errorMessage: string) => void) {
     let retryCount = 10;
     let timerId: null | ReturnType<typeof setInterval> = null;
 
     timerId = setInterval(async () => {
-      console.log("인터벌이 작동됩니다.");
       const isAccepted = findAcceptText();
 
-      console.log(isAccepted);
-
       if (isAccepted && timerId) {
-        console.log("문제 풀이가 정상적으로 확인되었습니다.");
-
         try {
           const code = getSubmittedCode();
           const extension = getFileExtension();
@@ -32,13 +27,18 @@ export default class LeetcodeEvent {
 
           clearInterval(timerId);
         } catch (error) {
-          console.log(error);
+          if (error instanceof Error) {
+            onError(error.message);
+          }
+
+          console.error(error);
+
           clearInterval(timerId);
         }
       }
 
       if (timerId && retryCount < 0) {
-        console.log("재시도 횟수를 초과하였습니다.");
+        console.error("재시도 횟수를 초과하였습니다.");
         clearInterval(timerId);
       }
 

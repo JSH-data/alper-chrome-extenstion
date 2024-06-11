@@ -1,6 +1,4 @@
 export function getSubmitButton() {
-  console.log("findSubmitButton");
-
   const submitButton = document.getElementById("submit-code");
 
   if (!submitButton) {
@@ -8,6 +6,16 @@ export function getSubmitButton() {
   }
 
   return submitButton;
+}
+
+export function getEditorNavbar() {
+  const navbar = document.querySelector(".editor ul");
+
+  if (navbar === null) {
+    throw new Error("Could not find editor navbar");
+  }
+
+  return navbar;
 }
 
 export function getCodeBlock() {
@@ -24,6 +32,6 @@ export function getProblemName() {
   return fileNameBlock.textContent;
 }
 
-export function findModalTitle() {
+export function getModalTitle() {
   return document.querySelector("h4.modal-title");
 }

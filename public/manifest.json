@@ -35,6 +35,7 @@
         "https://school.programmers.co.kr/*"
       ],
       "js": [
+        "scripts/check-content-load.js",
         "scripts/programmers.js",
         "scripts/constants.js",
         "scripts/status-message.js",
@@ -50,6 +51,7 @@
         "https://leetcode.com/*"
       ],
       "js": [
+        "scripts/check-content-load.js",
         "scripts/leetcodes.js",
         "scripts/constants.js",
         "scripts/status-message.js",

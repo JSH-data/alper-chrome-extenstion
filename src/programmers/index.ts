@@ -1,11 +1,23 @@
-import { getSubmitButton } from "@/programmers/dom-finder.ts";
+import { getEditorNavbar, getSubmitButton } from "@/programmers/dom-finder.ts";
 import ProgrammersEvent from "@/programmers/event-manager.ts";
 
-console.log("프로그래머스 페이지에 접속하셨군요 환영합니다.");
+checkContentLoad("#submit-code", "body").then((res) => {
+  const submitButton = getSubmitButton();
+  const navbar = getEditorNavbar();
 
-// InterSectionObserver로 변경 예정
-setTimeout(() => {
-  const button = getSubmitButton();
+  if (res && navbar) {
+    StatusMessage.appendStatusMessage(navbar);
 
-  ProgrammersEvent.addSubmitEvent(button, ProgrammersEvent.intervalEvent);
-}, 3000);
+    ProgrammersEvent.addSubmitEvent(submitButton, () =>
+      ProgrammersEvent.intervalEvent(StatusMessage.setMessage),
+    );
+
+    ChromeStorage.getUserInfo()
+      .then(() => {
+        console.log("인증에 성공했습니다!");
+      })
+      .catch((error: Error) => {
+        StatusMessage.setMessage(error.message);
+      });
+  }
+});

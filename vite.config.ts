@@ -19,18 +19,16 @@ export default defineConfig(() => {
     return inputFiles;
   }
 
-  const input: { [key: string]: string } = {
-    leetcodes: "src/leetcode/index.ts",
-    programmers: "src/programmers/index.ts",
-    ...getInputFiles(),
-  };
-
   return {
     build: {
       minify: false,
       rollupOptions: {
         treeshake: false,
-        input,
+        input: {
+          leetcodes: "src/leetcode/index.ts",
+          programmers: "src/programmers/index.ts",
+          ...getInputFiles(),
+        },
         output: {
           entryFileNames: "scripts/[name].js",
         },
@@ -46,11 +44,6 @@ export default defineConfig(() => {
             entry: "src/popup/index.tsx",
             filename: "index.html",
             template: "index.html",
-            // injectOptions: {
-            //   data: {
-            //     injectScript: `<script src="src/utils/storage.ts"></script>`,
-            //   },
-            // },
           },
         ],
       }),
