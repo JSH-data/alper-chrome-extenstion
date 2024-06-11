@@ -46,7 +46,11 @@ yarn build
 1. Get user authentication through Popup
 <br />
 <img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/5b709b45-91d8-456e-84b5-517ea72c200b"/>
+<br />
+
 2. Add your Repository Name(Required) and Folder Name(Optional)
 <br />
 <img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/947184ca-46e9-47ea-b069-76e4a8d967bd"/>
+<br />
+
 3. Enjoy Alpher!
