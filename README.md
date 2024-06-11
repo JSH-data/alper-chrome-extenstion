@@ -37,7 +37,8 @@ yarn build
 
 
 5. Enable [Chrome Extension](chrome://extensions/) Developer mode 
-<br />
+
+
 6. Load dist folder into Chrome Extension
 <br />
 <img src="https://github.com/JSH-data/alper-chrome-extenstion/assets/62323657/e0cfd433-335b-4a53-a9df-608142bca9a8" width="500" />
