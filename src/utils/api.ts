@@ -48,19 +48,13 @@ type GetContentInfoResponse = {
 async function getAccessToken(code: string): Promise<string | null> {
   try {
     const response = await fetch(
-      "https://github.com/login/oauth/access_token",
+      "https://wmksdptj7y2ecwbzkhgywcueiu0oskbh.lambda-url.ap-northeast-2.on.aws/",
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
         body: JSON.stringify({
-          client_id: "Ov23lig139G2CisyrKek",
-          client_secret: "f6e7e42534b52a1a99a25bc17ff29c663afba4da",
           code,
         }),
-      }
+      },
     );
 
     const result = await response.json();
@@ -122,7 +116,7 @@ async function getContentInfo({
           Accept: "application/json",
           Authorization: `Bearer ${token}`,
         },
-      }
+      },
     );
 
     return response.json();
@@ -162,7 +156,7 @@ async function updateFile({
         content,
         sha,
       }),
-    }
+    },
   );
 
   console.log("File is Updated", response);
@@ -197,7 +191,7 @@ async function uploadNewFile({
         message,
         content,
       }),
-    }
+    },
   );
 
   console.log("File is Uploaded", response);
