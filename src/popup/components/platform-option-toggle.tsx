@@ -5,9 +5,13 @@ export default function PlatformOptionToggle() {
   const onChangeCheckCondition = async (
     event: ChangeEvent<HTMLInputElement>,
   ) => {
+    const option = event.target.checked ? "ON" : "OFF";
+
     await ChromeStorage.setData({
-      [CONSTANT.PLATFORM_OPTION]: event.target.checked ? "ON" : "OFF",
+      [CONSTANT.PLATFORM_OPTION]: option,
     });
+
+    setToggleStatus(option);
   };
 
   const getPlatformOptions = async () => {
@@ -37,7 +41,7 @@ export default function PlatformOptionToggle() {
       <label className="switch">
         <input
           type="checkbox"
-          defaultChecked={toggleStatus === "ON"}
+          checked={toggleStatus === "ON"}
           onChange={onChangeCheckCondition}
         />
         <span className="slider"></span>
