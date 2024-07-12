@@ -1,9 +1,10 @@
+import "./index.css";
 import { ChangeEvent } from "react";
 import TextInput from "@/popup/components/text-input";
 import Permission from "@/popup/components/permission.tsx";
-import "./index.css";
 import RepositorySelector from "@/popup/components/repository-selector";
 import useUserInfo from "@/popup/hooks/useUserInfo.tsx";
+import PlatformOptionToggle from "@/popup/components/platform-option-toggle.tsx";
 
 function PopupTab() {
   const {
@@ -28,14 +29,7 @@ function PopupTab() {
   };
 
   return (
-    <div
-      className={"popup-tab"}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "200px",
-      }}
-    >
+    <div className="popup-tab">
       <h3 className="title">Welcome! To Alper!</h3>
       {authStatus === "PENDING" && <h5>Loading...</h5>}
 
@@ -53,9 +47,11 @@ function PopupTab() {
           <TextInput
             onChangeHandler={onChangeSavePathInput}
             value={savePath}
-            labelText="Directory"
+            labelText="Directory Path"
             keyId={CONSTANT.STORAGE_PATH}
           />
+
+          <PlatformOptionToggle />
         </>
       )}
     </div>

@@ -3,6 +3,7 @@ type UserInfo = {
   directory: string;
   owner: string;
   token: string;
+  platformOption: string;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -33,6 +34,7 @@ class ChromeStorage {
       CONSTANT.OWNER_NAME,
       CONSTANT.ACCESS_TOKEN,
       CONSTANT.STORAGE_PATH,
+      CONSTANT.PLATFORM_OPTION,
     ]);
 
     if (
@@ -48,6 +50,9 @@ class ChromeStorage {
       owner: data[CONSTANT.OWNER_NAME],
       directory: data[CONSTANT.STORAGE_PATH] ? data[CONSTANT.STORAGE_PATH] : "",
       token: data[CONSTANT.ACCESS_TOKEN],
+      platformOption: data[CONSTANT.PLATFORM_OPTION]
+        ? data[CONSTANT.PLATFORM_OPTION]
+        : "OFF",
     };
   }
 }

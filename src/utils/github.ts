@@ -5,12 +5,13 @@ class Github {
     code: string,
     platform: string,
   ) {
-    const { repo, directory, owner, token } = await ChromeStorage.getUserInfo();
+    const { repo, directory, owner, token, platformOption } =
+      await ChromeStorage.getUserInfo();
 
     const encodedFileName = encodeURIComponent(fileName);
 
     const encodedFilePath = `${directory}/${encodedFileName}`;
-    const normalPath = `${directory}/${fileName}`;
+    const normalPath = `${directory}/${platformOption === "ON" ? platform + "/" : ""}${fileName}`;
 
     const contentInfo = await getContentInfo({
       repo,
