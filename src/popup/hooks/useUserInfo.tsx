@@ -39,11 +39,13 @@ export default function useUserInfo() {
 
   const setDefaultInfo = async () => {
     const directory = await ChromeStorage.getData(CONSTANT.STORAGE_PATH);
+
     if (directory?.length) {
       setSavePath(directory);
     }
 
     const repo = await ChromeStorage.getData(CONSTANT.REPO_NAME);
+
     if (repo?.length) {
       setRepoName(repo);
     }

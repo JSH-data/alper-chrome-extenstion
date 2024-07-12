@@ -12,7 +12,6 @@ export default function RepositorySelector({
   if (repoNames.length === 0) {
     return <div>First, make repository</div>;
   }
-  console.log("defaultRepo", defaultRepo);
   return (
     <div className="select-wrapper">
       <label className="input-label" htmlFor="repo-select">
