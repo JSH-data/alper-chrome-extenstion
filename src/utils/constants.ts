@@ -4,6 +4,7 @@ const CONSTANT = {
   OWNER_NAME: "owner_name",
   STORAGE_PATH: "storage_path",
   ACCESS_TOKEN: "access_token",
+  PLATFORM_OPTION: "PLATFORM_OPTION",
 } as const;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
