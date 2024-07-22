@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "alper-prototype",
-  "version": "0.0",
-  "description": "알퍼 프로토타입 제작",
+  "version": "0.0.1",
+  "description": "알고리즘 자동 커밋 크롬 익스텐션",
   "action": {
     "default_popup": "index.html"
   },
