@@ -6,7 +6,7 @@ checkContentLoad('[data-e2e-locator="console-submit-button"]', "#__next").then(
     const submitButton = getSubmitButton();
     const codeTabBar = getCodeTabBar();
 
-    if (res && codeTabBar) {
+    if (res && codeTabBar && submitButton) {
       StatusMessage.appendStatusMessage(codeTabBar);
 
       LeetcodeEvent.addSubmitEvent(submitButton, () =>
@@ -20,6 +20,10 @@ checkContentLoad('[data-e2e-locator="console-submit-button"]', "#__next").then(
         .catch((error: Error) => {
           StatusMessage.setMessage(error.message);
         });
+
+      return;
     }
+
+    StatusMessage.setMessage(MESSAGE_TEXT.E51);
   },
 );

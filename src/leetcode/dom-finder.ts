@@ -1,13 +1,5 @@
 export function getSubmitButton() {
-  const submitButton = document.querySelector(
-    '[data-e2e-locator="console-submit-button"]',
-  );
-
-  if (!submitButton) {
-    throw new Error("Could not find submitButton");
-  }
-
-  return submitButton;
+  return document.querySelector('[data-e2e-locator="console-submit-button"]');
 }
 
 export function findAcceptText(): boolean {
@@ -26,18 +18,12 @@ export function getSubmittedCode() {
   const codeElement = codeBlock?.querySelector("code");
 
   if (!codeElement) {
-    throw new Error("Could not find code block");
+    throw new Error(MESSAGE_TEXT.E21);
   }
 
   return contentEncoder(codeElement.innerText);
 }
 
 export function getCodeTabBar() {
-  const codeTabBar = document.querySelector("#code_tabbar_outer div div");
-
-  if (codeTabBar === null) {
-    throw new Error("Could not find code tab bar");
-  }
-
-  return codeTabBar;
+  return document.querySelector("#code_tabbar_outer div div");
 }

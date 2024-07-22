@@ -5,7 +5,7 @@ export function getFileExtension() {
     return EXTENSIONS_NAME[language];
   }
 
-  throw new Error("Failed to get file extensions");
+  throw new Error(MESSAGE_TEXT.E11);
 }
 
 export function getProblemName() {
