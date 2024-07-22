@@ -1,21 +1,9 @@
 export function getSubmitButton() {
-  const submitButton = document.getElementById("submit-code");
-
-  if (!submitButton) {
-    throw new Error("Could not find submitButton");
-  }
-
-  return submitButton;
+  return document.getElementById("submit-code");
 }
 
 export function getEditorNavbar() {
-  const navbar = document.querySelector(".editor ul");
-
-  if (navbar === null) {
-    throw new Error("Could not find editor navbar");
-  }
-
-  return navbar;
+  return document.querySelector(".editor ul");
 }
 
 export function getCodeBlock() {
@@ -26,7 +14,7 @@ export function getProblemName() {
   const fileNameBlock = document.querySelector(".breadcrumb > .active");
 
   if (fileNameBlock === null || fileNameBlock.textContent === null) {
-    throw new Error("Problem name is missing");
+    throw new Error(MESSAGE_TEXT.E21);
   }
 
   return fileNameBlock.textContent;

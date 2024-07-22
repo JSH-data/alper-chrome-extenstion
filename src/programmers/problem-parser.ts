@@ -7,14 +7,14 @@ export function getFileExtension() {
     return EXTENSIONS_NAME[language];
   }
 
-  throw new Error("Failed to get file extensions");
+  throw new Error(MESSAGE_TEXT.E11);
 }
 
 export function getSubmittedCode() {
   const codeElement = document.querySelector("#code");
 
   if (codeElement === null) {
-    throw new Error("There is no codes! Upload is Failed!");
+    throw new Error(MESSAGE_TEXT.E21);
   }
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

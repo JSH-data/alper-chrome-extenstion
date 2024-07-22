@@ -5,7 +5,7 @@ checkContentLoad("#submit-code", "body").then((res) => {
   const submitButton = getSubmitButton();
   const navbar = getEditorNavbar();
 
-  if (res && navbar) {
+  if (res && navbar && submitButton) {
     StatusMessage.appendStatusMessage(navbar);
 
     ProgrammersEvent.addSubmitEvent(submitButton, () =>
@@ -19,5 +19,9 @@ checkContentLoad("#submit-code", "body").then((res) => {
       .catch((error: Error) => {
         StatusMessage.setMessage(error.message);
       });
+
+    return;
   }
+
+  StatusMessage.setMessage(MESSAGE_TEXT.E51);
 });
