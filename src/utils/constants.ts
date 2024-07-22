@@ -12,6 +12,7 @@ const MESSAGE_TEXT = {
   E21: "코드 파싱에 실패하였습니다. (CODE: E21)",
   E31: "깃허브 업로드 중 문제가 발생했습니다. (CODE: E31)",
   E41: "인증이 완료되지 않았습니다. 팝업을 통해 인증을 완료해주세요. (CODE: E41)",
+  E51: "DOM 요소를 불러오는데 실패했습니다. 이슈 게시판에 문의해주세요 (CODE: E51)",
   NORMAL: "Alpher is Running!",
 } as const;
 
