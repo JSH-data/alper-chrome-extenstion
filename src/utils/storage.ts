@@ -6,7 +6,6 @@ type UserInfo = {
   platformOption: string;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class ChromeStorage {
   static async getData(key: string | string[]) {
     const data = await chrome.storage.local.get(key);

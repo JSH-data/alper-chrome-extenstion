@@ -44,7 +44,6 @@ type GetContentInfoResponse = {
   };
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function getAccessToken(code: string): Promise<string | null> {
   try {
     const response = await fetch(
@@ -71,7 +70,6 @@ async function getAccessToken(code: string): Promise<string | null> {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function getUserName(token: string): Promise<string | null> {
   try {
     const response = await fetch("https://api.github.com/user", {
@@ -98,7 +96,6 @@ async function getUserName(token: string): Promise<string | null> {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function getContentInfo({
   owner,
   repo,
@@ -127,7 +124,6 @@ async function getContentInfo({
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function updateFile({
   owner,
   repo,
@@ -164,7 +160,6 @@ async function updateFile({
   return response.json();
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function uploadNewFile({
   owner,
   repo,

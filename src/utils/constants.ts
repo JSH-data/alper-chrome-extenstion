@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CONSTANT = {
   REPO_NAME: "repo_name",
   OWNER_NAME: "owner_name",
@@ -7,7 +6,6 @@ const CONSTANT = {
   PLATFORM_OPTION: "PLATFORM_OPTION",
 } as const;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const MESSAGE_TEXT = {
   E01: "예기치 못한 에러가 발생했습니다. (CODE: E01)",
   E11: "확장자를 찾지 못하였습니다. (CODE: E10)",
@@ -17,7 +15,6 @@ const MESSAGE_TEXT = {
   NORMAL: "Alpher is Running!",
 } as const;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const EXTENSIONS_NAME: { [key: string]: string } = Object.freeze({
   TypeScript: "ts",
   JavaScript: "js",

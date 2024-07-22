@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class Github {
   static async uploadOrUpdate(
     fileName: string,

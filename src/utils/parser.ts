@@ -1,5 +1,5 @@
 // Content를 Base64 포멧으로 변환하기 위한 함수입니다.
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 function contentEncoder(code: string) {
   // console.log("original code", code);
 

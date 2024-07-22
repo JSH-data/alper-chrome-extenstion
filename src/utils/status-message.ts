@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class StatusMessage {
   static elementId = "alpher-status-message" as const;
 

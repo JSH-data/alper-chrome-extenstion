@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function checkContentLoad(
   targetSelector: string,
   parentSelector: string,
