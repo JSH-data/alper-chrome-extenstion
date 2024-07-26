@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "alper-prototype",
+  "name": "alper",
   "version": "0.0.1",
-  "description": "알고리즘 자동 커밋 크롬 익스텐션",
+  "description": "Algorithm Automatic Commit Chrome Extension",
   "action": {
     "default_popup": "index.html"
   },
@@ -13,9 +13,6 @@
     "128": "icon-128.png"
   },
   "permissions": [
-    "scripting",
-    "tabs",
-    "activeTab",
     "storage"
   ],
   "content_scripts": [
